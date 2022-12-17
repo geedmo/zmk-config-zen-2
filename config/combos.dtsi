@@ -1,0 +1,141 @@
+/* 34 KEY MATRIX / LAYOUT MAPPING
+
+   ╭─────────────────────┬─────────────────────╮
+   │ ___ LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 ___ │
+   │ LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 │
+   │ LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 │
+   ╰───────────╮ LH1 ___ │ ___ RH1 ╭───────────╯
+               ╰─────────┴─────────╯             */
+
+// qmk friendly
+#define COMB(name, binding, keypos) ZMK_COMBO(name, binding, keypos, ALL)
+
+#define COMB_MACRO(name, macro_binding, keypos) \
+    ZMK_BEHAVIOR(macro_ ## name, macro, \
+        wait-ms = <30>; \
+        tap-ms = <40>; \
+        bindings = <macro_binding>; \
+    ) \
+    COMB(name, &macro_ ## name, keypos)
+
+//#undef COMBO_TERM
+//#define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
+
+// write open/close symbol and place cursor in between
+#define KP_BOTHSYM(ko,kc) &kp ko &kp kc &kp LEFT
+// dual symbol definitions
+#define KP_BOTHPAREN KP_BOTHSYM(LPAR,RPAR)
+#define KP_BOTHCBR KP_BOTHSYM(LBKT,RBKT)
+#define KP_BOTHBRC KP_BOTHSYM(LBRC,RBRC)
+#define KP_BOTHANGLE KP_BOTHSYM(LT,GT)
+#define KP_BOTHDQUOTE KP_BOTHSYM(DQT,DQT)
+#define KP_BOTHSQUOTE KP_BOTHSYM(SQT,SQT)
+
+// emacs shortcuts
+#define EMACS_LEADER &kp LS(SPACE)
+#define SC_SPLIT_WIN &kp LC(X) &kp N3
+#define SC_DELETE_WIN &kp LC(X) &kp N0
+#define SC_FIND_FILE EMACS_LEADER &kp F &kp F
+#define SC_SWOOP EMACS_LEADER &kp S &kp S
+#define SC_SAVE_FILE EMACS_LEADER &kp F &kp S
+#define SC_FIND_BUFFER EMACS_LEADER &kp B &kp B
+#define SC_TOG_BUFFER EMACS_LEADER &kp TAB
+#define SC_CLOSE_BUFFER EMACS_LEADER &kp B &kp D
+
+// swapper (like?)
+#define SW_WIN &kt LALT &kp TAB
+
+// Layer toggles
+#define NAVESC &lt NAV ESC
+#define FUNESC &lt FUN ESC
+
+// cancel all / reset to base layer
+COMB(C_cancel,              &kp CANCEL,      RB4 RM4)
+
+// hyper - meh
+COMB(C_hyper,               &kp HYPR,        LM4 LM3)
+COMB(C_meh,                 &kp MEH,         RM3 RM4)
+
+// TAB x2
+COMB(C_tab_1,               &kp TAB,         LT2 LT1)
+COMB(C_tab_2,               &kp TAB,         RT1 RT2)
+
+// Text control
+COMB(C_backspace,           &kp BSPC,        RT2 RT3)
+COMB(C_del,                 &kp DEL,         LT2 LT3)
+COMB(C_nav,                 NAVESC,          LM2 LM1)
+COMB(C_esc_fun,             FUNESC,          RM2 RM1)
+COMB(C_enter_1,             &kp RET,         RM2 RM3)
+COMB(C_enter_2,             &kp RET,         LM3 LM2)
+
+//ZMK_COMBO(combo_copy,     &kp LC(C),       LB2 LB3,  ALL)
+//ZMK_COMBO(combo_paste,    &kp LC(V),       LB1 LB2,  ALL)
+
+// left+right side combos
+COMB(C_emails,              &sl EMAILS,      LT1 RT1)
+COMB(C_wnav,                &sl WNAV,        LM2 RM2)
+COMB(C_numpad,              &sl NUMPAD,      LB2 LB1)
+/* COMB(C_numword,          &mo NUMWORD,     LOWER,    NAVSPC) */
+/* COMB(C_caps,             &mo KC_CAPS,     LB3 RB3) */
+/* COMB(C_mouse_1,          &mo MOUSE,       KC_S,     KC_L) */
+/* COMB(C_mouse_2,          &mo MOUSE,       MOD_LCS,  KC_R) */
+COMB(C_adjust,              &sl ADJUST,      LB4 RB4)
+
+// proposals
+// ---------
+// COMB(C_evilnav,          KC_NO,           KC_D,     HOME_V)
+// COMB(C_evilnav,          KC_NO,           KC_D,     KC_X)
+
+// vim helpers
+COMB(C_beg,                 &kp CARET,       RB1 RB2)
+COMB(C_end,                 &kp DLLR,        RB2 RB3)
+
+// copy/cut/paste
+COMB(paste,                 &kp LS(INS),     RT0 RT1)
+COMB(copy,                  &kp LC(INS),     RM0 RM1)
+COMB(cut,                   &kp LC(X),       RB0 RB1)
+
+// Symbol pairs
+COMB_MACRO(bothparen,       KP_BOTHPAREN,    RT1 RT3)
+COMB_MACRO(bothcbr,         KP_BOTHCBR,      RB1 RB3)
+COMB_MACRO(bothbrc,         KP_BOTHBRC,      RM1 RM3)
+COMB_MACRO(bothangle,       KP_BOTHANGLE,    LT1 LT3)
+COMB_MACRO(bothdquote,      KP_BOTHDQUOTE,   LM1 LM3)
+COMB_MACRO(bothsquote,      KP_BOTHSQUOTE,   LB1 LB3)
+
+// Symbols
+COMB(sym_minus,             &kp MINUS,       RT2 RM3)
+COMB(sym_colon,             &kp COLON,       RM1 RT2)
+COMB(sym_undrscr,           &kp UNDER,       LM3 LT2)
+COMB(sym_pipe,              &kp PIPE,        LT2 LM1)
+// COMB(sym_perc,           KC_PERC,         KC_C,     HOME_V)
+/* COMB(sym_equal,          KC_EQUAL,        KC_C,     MOD_X) */
+/* COMB(sym_slash,          KC_SLSH,         MOD_DOT,  MOD_RCS) */
+
+// numpad
+/* COMB(C_numpad_2,         LT(_NAV,         KC_PERC), KC_C, HOME_V) */
+
+// shortcuts combos
+COMB_MACRO(sc_close_buffer, SC_CLOSE_BUFFER, RT1 RM1)
+COMB_MACRO(sc_split_win,    SC_SPLIT_WIN,    RT2 RM2)
+COMB_MACRO(sc_delete_win,   SC_DELETE_WIN,   RT3 RM3)
+
+COMB_MACRO(sc_swoop,        SC_SWOOP,        LT1 LM1)
+COMB_MACRO(sc_find_file,    SC_FIND_FILE,    LT2 LM2)
+COMB_MACRO(sc_find_buffer,  SC_FIND_BUFFER,  LT3 LM3)
+
+// diagonal combo
+COMB_MACRO(sc_save_file,    SC_SAVE_FILE,    RM2 RB3)
+COMB_MACRO(sc_tog_buffer,   SC_TOG_BUFFER,   RM2 RB1)
+
+// alt/tab app swithcing
+/* COMB_MACRO(app_swap_r,      &kt LALT,        RT1 RT2 RT3) */
+COMB_MACRO(app_swap_r,      &kp LA(ESC),     RT1 RT2 RT3)
+COMB(alt_tab_r,             &kp LA(TAB),     RM1 RM2 RM3)
+/* COMB_MACRO(app_swap_l,      &kt LALT,        LT1 LT2 LT3) */
+COMB_MACRO(app_swap_l,      &kp LA(ESC),     LT1 LT2 LT3)
+COMB(alt_tab_l,             &kp LA(TAB),     LM1 LM2 LM3)
+
+// right control
+COMB(C_rctrl_l,             &lt TNAV RCTRL,  LB4 LB3)
+COMB(C_rctrl_r,             &lt TNAV RCTRL,  RB3 RB4)
