@@ -112,6 +112,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        label = "default";
                         bindings = <
     XXXXXXX    MALT(W)    &kp E      &kp R        &kp T     &kp Y     &kp U            &kp I      MALT(O)    XXXXXXX
     MSFT(A)    &kp S      &kp D      MCTL(F)      &kp G     &kp H     MCTL(J)          &kp K      &kp L      MSFT(P)
@@ -121,6 +122,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 };
 
                 sym_layer {
+                        label = "sym";
                         bindings = <
     _______    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTRK  &td_parens   _______
     &kp GRAVE  &kp DQT    _______    &kp EXCL   _______    _______    &kp MINUS  &kp EQUAL  &td_cbrace   &kp SEMI
@@ -130,6 +132,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 };
 
                 media_layer {
+                        label = "media";
                         bindings = <
     _______    _______    _______    &kp C_BRI_UP  _______     _______     _______       _______        _______      _______
     _______    _______    _______    &kp C_BRI_DN  _______     &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP   &kp C_NEXT   &kp C_STOP
@@ -139,6 +142,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 };
 
                 fun_layer {
+                        label = "fun";
                         bindings = <
     XXXXXXX    &kp F1     &kp F2     &kp F3     &kp F4     XXXXXXX    XXXXXXX    &kp K_LOCK  &kp PAUSE_BREAK  XXXXXXX
     &kp F5     &kp F6     &kp F7     &kp F8     XXXXXXX    XXXXXXX    &sk RCTRL  XXXXXXX     &kp PSCRN        &n_tilde
@@ -148,6 +152,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 };
 
                 nav_layer {
+                        label = "nav";
                         bindings = <
     _______    &kp PG_DN  &kp UP     &kp PG_UP  _______    _______    &kp LC(LS(TAB)) _______    &kp LC(TAB) _______
     &kp HOME   &kp LEFT   &kp DOWN   &kp RIGHT  &kp END    &kp LEFT   &kp DOWN        &kp UP     &kp RIGHT   _______
@@ -157,6 +162,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 };
 
                numpad_layer  {
+                        label = "numpad";
                         bindings = <
     _______    _______   _______   _______   _______   &kp KP_NUMLOCK    &kp KP_N7  &kp KP_N8  &kp KP_N9  _______
     _______    _______   _______   _______   _______   &kp KP_PLUS       &kp KP_N4  &kp KP_N5  &kp KP_N6  &td_dotcom
@@ -166,6 +172,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 };
 
                wnav_layer  {
+                        label = "wnav";
                         bindings = <
     _______    &kp LA(TAB)    &kp LG(TAB)  _______    _______    &kp LG(LEFT) &kp LG(DOWN) &kp LG(UP) &kp LG(RIGHT) _______
     &kp LG(N6) &kp LG(N4)     &kp LG(N0)   &kp LG(N2) _______    _______      &kp LG(N3)   &kp LG(N1) &kp LG(N5)    &kp LG(N7)
@@ -175,6 +182,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 };
 
                emails_layer  {
+                        label = "emails";
                         bindings = <
     _______    _______    _______    _______    _______    _______    &ss_mailp _______    _______    _______
     _______    _______    _______    _______    _______    _______    _______    _______    _______    _______
@@ -184,6 +192,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 };
 
                 adjust_layer {
+                        label = "adjust";
                         bindings = <
    _______ &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF _______   _______ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  _______
    _______ &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR _______   _______ &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_PRV    &bt BT_NXT
@@ -193,6 +202,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 };
 
                tnav_layer  {
+                        label = "tnav";
                         bindings = <
     _______    _______        &kp RC(E)   &kp RC(R)   _______    &kp RC(LEFT) &kp RC(DOWN) &kp RC(UP) &kp RC(RIGHT) _______
     &kp RC(N6) &kp RC(N4)     &kp RC(N0)  &kp RC(N2)  _______    _______      &kp RC(N3)   &kp RC(N1) &kp RC(N5)    &kp RC(N7)
