@@ -100,9 +100,9 @@ ZMK_BEHAVIOR(ss_mailp, macro,
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "tap-preferred"; // flavor = "tap-preferred";
+            flavor = "balanced"; // flavor = "tap-preferred";
             tapping-term-ms = <250>;    // <---[[moderate duration]]
-            quick-tap-ms = <190>;
+            quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
