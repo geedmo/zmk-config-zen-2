@@ -102,7 +102,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
     };
