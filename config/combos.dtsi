@@ -53,8 +53,8 @@
 COMB(C_cancel,              &kp CANCEL,      RB4 RM4)
 
 // hyper - meh
-COMB(C_hyper,               &kp HYPR,        LM4 LM3)
-COMB(C_meh,                 &kp MEH,         RM3 RM4)
+// COMB(C_hyper,               &kp HYPR,        LM4 LM3)
+// COMB(C_meh,                 &kp MEH,         RM3 RM4)
 
 // TAB x2
 COMB(C_tab_1,               &kp TAB,         LT2 LT1)
