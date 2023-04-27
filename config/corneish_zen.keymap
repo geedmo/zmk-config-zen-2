@@ -47,12 +47,11 @@
 #define MGUI(k) &hrm LGUI k
 #define MCS(k) &hrm LC(LSHFT) k
 #define MCA(k) &hrm LC(LALT) k
+#define MHYPR(k) &hrm LS(LC(LA(LGUI))) k
+#define MMEH(k) &hrm LS(LC(LALT)) k
 
 #define HYPR LS(LC(LA(LGUI)))
 #define MEH LS(LC(LALT))
-
-#define MHYPR(k) &hrm LS(LC(LA(LGUI))) k
-#define MMEH(k) &hrm LS(LC(LALT)) k
 
 #define CANCEL &mo DEFAULT
 
@@ -116,7 +115,7 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 default_layer {
                         label = "default";
                         bindings = <
-    XXXXXXX    MALT(W)    &kp E      &kp R        MHYPER(T)  MMEH(Y)   &kp U    &kp I      MALT(O)    XXXXXXX
+    XXXXXXX    MALT(W)    &kp E      &kp R        MHYPR(T)   MMEH(Y)   &kp U    &kp I      MALT(O)    XXXXXXX
     MSFT(A)    MGUI(S)    &kp D      MCTL(F)      &kp G      &kp H     MCTL(J)  &kp K      MGUI(L)    MSFT(P)
     MCS(Q)     MCA(X)     &kp C      &kp V        &kp B      &kp N     &kp M    &kp COMMA  MCA(DOT)   MCS(Z)
                           XXXXXXX    XXXXXXX      &sl SYM    &lt NAV   SPACE   XXXXXXX    XXXXXXX
