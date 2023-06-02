@@ -115,8 +115,8 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                 default_layer {
                         label = "default";
                         bindings = <
-    XXXXXXX    MALT(W)    &kp E      &kp R        MHYPR(T)   MMEH(Y)   &kp U    &kp I      MALT(O)    XXXXXXX
-    MSFT(A)    MGUI(S)    &kp D      MCTL(F)      &kp G      &kp H     MCTL(J)  &kp K      MGUI(L)    MSFT(P)
+    XXXXXXX    MALT(W)    &kp E      MGUI(R)      MHYPR(T)   MMEH(Y)   MGUI(U)  &kp I      MALT(O)    XXXXXXX
+    MSFT(A)    &kp S      &kp D      MCTL(F)      &kp G      &kp H     MCTL(J)  &kp K      &kp L    MSFT(P)
     MCS(Q)     MCA(X)     &kp C      &kp V        &kp B      &kp N     &kp M    &kp COMMA  MCA(DOT)   MCS(Z)
                           XXXXXXX    XXXXXXX      &sl SYM    &lt NAV   SPACE   XXXXXXX    XXXXXXX
                         >;
