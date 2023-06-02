@@ -10,6 +10,8 @@
 // qmk friendly
 #define COMB(name, binding, keypos) ZMK_COMBO(name, binding, keypos, ALL)
 
+#define COMBO_TERM 50
+
 #define COMB_MACRO(name, macro_binding, keypos) \
     ZMK_BEHAVIOR(macro_ ## name, macro, \
         wait-ms = <30>; \
