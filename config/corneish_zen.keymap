@@ -62,19 +62,19 @@ ZMK_UNICODE_PAIR(n_tilde,   N0, N0, F, N1,   N0, N0, D, N1)
 
 // tap dance
 ZMK_BEHAVIOR(td_parens, tap_dance,
-    tapping-term-ms = <200>;
+    tapping-term-ms = <250>;
     bindings = <&kp LPAR>, <&kp RPAR>;
 )
 ZMK_BEHAVIOR(td_bracket, tap_dance,
-    tapping-term-ms = <200>;
+    tapping-term-ms = <250>;
     bindings = <&kp LBKT>, <&kp RBKT>;
 )
 ZMK_BEHAVIOR(td_cbrace, tap_dance,
-    tapping-term-ms = <200>;
+    tapping-term-ms = <250>;
     bindings = <&kp LBRC>, <&kp RBRC>;
 )
 ZMK_BEHAVIOR(td_dotcom, tap_dance,
-    tapping-term-ms = <200>;
+    tapping-term-ms = <250>;
     bindings = <&kp DOT>, <&kp COMMA>;
 )
 // send string macros
