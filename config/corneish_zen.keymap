@@ -57,6 +57,14 @@
 
 #include "./combos.dtsi"
 
+#define SS_BEHAVIOR(name, bindings)
+    // send string macros
+    ZMK_BEHAVIOR(ss_ ## name, macro, \
+        wait-ms = <30>; \
+        tap-ms = <40>; \
+        bindings = <bindings>; \
+    )
+
 // unicode
 ZMK_UNICODE_PAIR(n_tilde,   N0, N0, F, N1,   N0, N0, D, N1)
 
@@ -77,12 +85,14 @@ ZMK_BEHAVIOR(td_dotcom, tap_dance,
     tapping-term-ms = <250>;
     bindings = <&kp DOT>, <&kp COMMA>;
 )
+
 // send string macros
-ZMK_BEHAVIOR(ss_mailp, macro,
-    wait-ms = <30>;
-    tap-ms = <40>;
-    bindings = <&kp M &kp O &kp R &kp A &kp L &kp E &kp S &kp DOT &kp G &kp E &kp R &kp M &kp A &kp N &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M >;
-)
+SS_BEHAVIOR(ss_mailp, &kp M &kp O &kp R &kp A &kp L &kp E &kp S &kp DOT &kp G &kp E &kp R &kp M &kp A &kp N &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M)
+SS_BEHAVIOR(ss_mail_themicon, &kc T &kc H &kc E &kc M &kc I &kc C &kc O &kc N &kc DOT &kc C &kc O &kc AT &kc G &kc M &kc A &kc I &kc L &kc DOT &kc C &kc O &kc M )
+SS_BEHAVIOR(ss_mail_geedmo, &kc G &kc E &kc E &kc D &kc M &kc O &kc DOT &kc D &kc S &kc AT &kc G &kc M &kc A &kc I &kc L &kc DOT &kc C &kc O &kc M )
+SS_BEHAVIOR(ss_mail_goodb, &kc G &kc O &kc O &kc D &kc F &kc O &kc R &kc T &kc H &kc E &kc B &kc L &kc O &kc O &kc D &kc AT &kc G &kc M &kc A &kc I &kc L &kc DOT &kc C &kc O &kc M )
+SS_BEHAVIOR(ss_mail_mmm, &kc G &kc E &kc R &kc M &kc A &kc N &kc DOT &kc M &kc O &kc R &kc A &kc L &kc E &kc S &kc AT &kc M &kc M &kc M &kc H &kc C &kc DOT &kc C &kc O &kc M )
+SS_BEHAVIOR(ss_mail_sl,&kc G &kc E &kc R &kc M &kc A &kc N &kc DOT &kc M &kc O &kc R &kc A &kc L &kc E &kc S &kc AT &kc S &kc M &kc A &kc R &kc T &kc L &kc O &kc G &kc I &kc X &kc P &kc R &kc DOT &kc C &kc O &kc M  )
 
 / {
     chosen {
@@ -185,10 +195,10 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                emails_layer  {
                         label = "emails";
                         bindings = <
-    _______    _______    _______    _______    _______    _______    &ss_mailp _______    _______    _______
-    _______    _______    _______    _______    _______    _______    _______    _______    _______    _______
-    _______    _______    _______    _______    _______    _______    _______    _______    _______    _______
-                          XXXXXXX    XXXXXXX    _______    _______    XXXXXXX    XXXXXXX
+    _______    &ss_mail_geedmo  _______    _______    &ss_mail_themicon  _______   &ss_mailp      _______    _______   _______
+    _______    &ss_mail_sl      _______    _______    &ss_mail_goodb     _______   _______        _______    _______   &ss_mailp
+    _______    _______          _______    _______    _______            _______   &ss_mail_mmm   _______    _______   _______
+                                XXXXXXX    XXXXXXX    _______            _______   XXXXXXX        XXXXXXX
                         >;
                 };
 
