@@ -7,12 +7,13 @@
    ╰───────────╮ LH1 ___ │ ___ RH1 ╭───────────╯
                ╰─────────┴─────────╯             */
 
+#undef COMBO_TERM
+#define COMBO_TERM 50  // (default is 30ms if omitted)
+
 // qmk friendly
 #define COMB(name, binding, keypos) ZMK_COMBO(name, binding, keypos, ALL)
 // combo for specific layer
 #define COMBL(name, binding, keypos, layer) ZMK_COMBO(name, binding, keypos, layer)
-
-#define COMBO_TERM 50
 
 #define MACRO_BEHAVIOR(name, macro_binding) \
     ZMK_BEHAVIOR(macro_ ## name, macro, \
@@ -29,8 +30,6 @@
     MACRO_BEHAVIOR(name, macro_binding)
     COMBL(name, &macro_ ## name, keypos, layer)
 
-//#undef COMBO_TERM
-//#define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
 
 // write open/close symbol and place cursor in between
 #define KP_BOTHSYM(ko,kc) &kp ko &kp kc &kp LEFT
