@@ -51,6 +51,31 @@
 #define NAVESC &lt NAV ESC
 #define FUNESC &lt FUN ESC
 
+// override some combos for numpad to disable them
+// COMB(C_backspace,           &kp BSPC,        RT2 RT3)
+// COMB(C_tab_2,               &kp TAB,         RT1 RT2)
+// COMB(C_esc_fun,             FUNESC,          RM2 RM1)
+// COMB(C_enter_1,             &kp RET,         RM2 RM3)
+// COMB(C_beg,                 &kp CARET,       RB1 RB2)
+// COMB(C_end,                 &kp DLLR,        RB2 RB3)
+// COMB_MACRO(bothparen,       KP_BOTHPAREN,    RT1 RT3)
+// COMB_MACRO(bothcbr,         KP_BOTHCBR,      RB1 RB3)
+// COMB_MACRO(bothbrc,         KP_BOTHBRC,      RM1 RM3)
+// COMB(sym_minus,             &kp MINUS,       RT2 RM3)
+// COMB(sym_colon,             &kp COLON,       RM1 RT2)
+// COMB_MACRO(sc_close_buffer, SC_CLOSE_BUFFER, RT1 RM1)
+// COMB_MACRO(sc_split_win,    SC_SPLIT_WIN,    RT2 RM2)
+// COMB_MACRO(sc_delete_win,   SC_DELETE_WIN,   RT3 RM3)
+// COMB_MACRO(sc_save_file,    SC_SAVE_FILE,    RM2 RB3)
+COMBL(no_sc_tog_buffer,   XXXXXXX,   RM2 RB1, NUMPAD)
+COMBL(no_sc_save_file,    XXXXXXX,   RM2 RB3, NUMPAD)
+COMBL(no_C_beg,           XXXXXXX,   RB1 RB2, NUMPAD)
+COMBL(no_C_end,           XXXXXXX,   RB2 RB3, NUMPAD)
+COMBL(no_C_esc_fun,       XXXXXXX,   RM2 RM1, NUMPAD)
+COMBL(no_sym_colon,       XXXXXXX,   RM1 RT2, NUMPAD)
+COMBL(no_sym_minus,       XXXXXXX,   RT2 RM3, NUMPAD)
+
+
 // cancel all / reset to base layer
 COMB(C_cancel,              &kp CANCEL,      RB4 RM4)
 
@@ -142,26 +167,3 @@ COMB(alt_tab_l,             &kp LA(TAB),     LM1 LM2 LM3)
 COMB(C_rctrl_l,             &lt TNAV RCTRL,  LB4 LB3)
 COMB(C_rctrl_r,             &lt TNAV RCTRL,  RB3 RB4)
 
-// override some combos for numpad to disable them
-// COMB(C_backspace,           &kp BSPC,        RT2 RT3)
-// COMB(C_tab_2,               &kp TAB,         RT1 RT2)
-// COMB(C_esc_fun,             FUNESC,          RM2 RM1)
-// COMB(C_enter_1,             &kp RET,         RM2 RM3)
-// COMB(C_beg,                 &kp CARET,       RB1 RB2)
-// COMB(C_end,                 &kp DLLR,        RB2 RB3)
-// COMB_MACRO(bothparen,       KP_BOTHPAREN,    RT1 RT3)
-// COMB_MACRO(bothcbr,         KP_BOTHCBR,      RB1 RB3)
-// COMB_MACRO(bothbrc,         KP_BOTHBRC,      RM1 RM3)
-// COMB(sym_minus,             &kp MINUS,       RT2 RM3)
-// COMB(sym_colon,             &kp COLON,       RM1 RT2)
-// COMB_MACRO(sc_close_buffer, SC_CLOSE_BUFFER, RT1 RM1)
-// COMB_MACRO(sc_split_win,    SC_SPLIT_WIN,    RT2 RM2)
-// COMB_MACRO(sc_delete_win,   SC_DELETE_WIN,   RT3 RM3)
-// COMB_MACRO(sc_save_file,    SC_SAVE_FILE,    RM2 RB3)
-COMBL(no_sc_tog_buffer,   XXXXXXX,   RM2 RB1, NUMPAD)
-COMBL(no_sc_save_file,    XXXXXXX,   RM2 RB3, NUMPAD)
-COMBL(no_C_beg,           XXXXXXX,   RB1 RB2, NUMPAD)
-COMBL(no_C_end,           XXXXXXX,   RB2 RB3, NUMPAD)
-COMBL(no_C_esc_fun,       XXXXXXX,   RM2 RM1, NUMPAD)
-COMBL(no_sym_colon,       XXXXXXX,   RM1 RT2, NUMPAD)
-COMBL(no_sym_minus,       XXXXXXX,   RT2 RM3, NUMPAD)
