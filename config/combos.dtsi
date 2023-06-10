@@ -15,21 +15,13 @@
 // combo for specific layer
 #define COMBL(name, binding, keypos, layer) ZMK_COMBO(name, binding, keypos, layer)
 
-#define MACRO_BEHAVIOR(name, macro_binding) \
+#define COMB_MACRO(name, macro_binding, keypos) \
     ZMK_BEHAVIOR(macro_ ## name, macro, \
         wait-ms = <30>; \
         tap-ms = <40>; \
         bindings = <macro_binding>; \
-    )
-
-#define COMB_MACRO(name, macro_binding, keypos) \
-    MACRO_BEHAVIOR(name, macro_binding) \
+    ) \
     COMB(name, &macro_ ## name, keypos)
-
-#define COMBL_MACRO(name, macro_binding, keypos, layer) \
-    MACRO_BEHAVIOR(name, macro_binding) \
-    COMBL(name, &macro_ ## name, keypos, layer)
-
 
 // write open/close symbol and place cursor in between
 #define KP_BOTHSYM(ko,kc) &kp ko &kp kc &kp LEFT
