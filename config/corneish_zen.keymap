@@ -146,8 +146,8 @@ ZMK_BEHAVIOR(ss_mailp, macro,
                         label = "fun";
                         bindings = <
     XXXXXXX    &kp F1     &kp F2     &kp F3     &kp F4     XXXXXXX    XXXXXXX    &kp K_LOCK  &kp PAUSE_BREAK  XXXXXXX
-    &kp F5     &kp F6     &kp F7     &kp F8     XXXXXXX    XXXXXXX    &sk RCTRL  XXXXXXX     &kp PSCRN        &n_tilde
-    &kp F9     &kp F10    &kp F11    &kp F12    XXXXXXX    XXXXXXX    &kp K_APP  XXXXXXX     XXXXXXX          XXXXXXX
+    &kp F5     &kp F6     &kp F7     &kp F8     XXXXXXX    XXXXXXX    XXXXXXX    XXXXXXX     &kp PSCRN        &n_tilde
+    &kp F9     &kp F10    &kp F11    &kp F12    XXXXXXX    XXXXXXX    XXXXXXX    XXXXXXX     &kp K_APP        &sk RCTRL
                           XXXXXXX    XXXXXXX    CANCEL     _______    XXXXXXX    XXXXXXX
                         >;
                 };
