@@ -116,8 +116,8 @@ COMB_MACRO(bothsquote,      KP_BOTHSQUOTE,   LB1 LB3)
 // Symbols
 COMBL(sym_minus,            &kp MINUS,       RT2 RM3, DEFAULT)
 COMBL(sym_colon,            &kp COLON,       RM1 RT2, DEFAULT)
-COMB(sym_undrscr,           &kp UNDER,       LM3 LT2)
-COMB(sym_pipe,              &kp PIPE,        LT2 LM1)
+//COMB(sym_undrscr,           &kp UNDER,       LM3 LT2)
+//COMB(sym_pipe,              &kp PIPE,        LT2 LM1)
 // COMB(sym_perc,           KC_PERC,         KC_C,     HOME_V)
 /* COMB(sym_equal,          KC_EQUAL,        KC_C,     MOD_X) */
 /* COMB(sym_slash,          KC_SLSH,         MOD_DOT,  MOD_RCS) */
