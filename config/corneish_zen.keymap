@@ -57,7 +57,7 @@
 
 #include "./combos.dtsi"
 
-#define SS_BEHAVIOR(name, bindings)
+#define SS_BEHAVIOR(name, bindings) \
     // send string macros
     ZMK_BEHAVIOR(ss_ ## name, macro, \
         wait-ms = <30>; \
