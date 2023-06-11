@@ -88,11 +88,11 @@ ZMK_BEHAVIOR(td_dotcom, tap_dance,
 
 // send string macros
 SS_BEHAVIOR(ss_mailp, &kp M &kp O &kp R &kp A &kp L &kp E &kp S &kp DOT &kp G &kp E &kp R &kp M &kp A &kp N &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M)
-SS_BEHAVIOR(ss_mail_themicon, &kp T &kp H &kp E &kp M &kp I &kp C &kp O &kp N &kp DOT &kp C &kp O &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M )
-SS_BEHAVIOR(ss_mail_geedmo, &kp G &kp E &kp E &kp D &kp M &kp O &kp DOT &kp D &kp S &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M )
-SS_BEHAVIOR(ss_mail_goodb, &kp G &kp O &kp O &kp D &kp F &kp O &kp R &kp T &kp H &kp E &kp B &kp L &kp O &kp O &kp D &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M )
-SS_BEHAVIOR(ss_mail_mmm, &kp G &kp E &kp R &kp M &kp A &kp N &kp DOT &kp M &kp O &kp R &kp A &kp L &kp E &kp S &kp AT &kp M &kp M &kp M &kp H &kp C &kp DOT &kp C &kp O &kp M )
-SS_BEHAVIOR(ss_mail_sl, &kp G &kp E &kp R &kp M &kp A &kp N &kp DOT &kp M &kp O &kp R &kp A &kp L &kp E &kp S &kp AT &kp S &kp M &kp A &kp R &kp T &kp L &kp O &kp G &kp I &kp X &kp P &kp R &kp DOT &kp C &kp O &kp M  )
+SS_BEHAVIOR(ss_mail_themicon, &kp T &kp H &kp E &kp M &kp I &kp C &kp O &kp N &kp DOT &kp C &kp O &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M)
+SS_BEHAVIOR(ss_mail_geedmo, &kp G &kp E &kp E &kp D &kp M &kp O &kp DOT &kp D &kp S &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M)
+SS_BEHAVIOR(ss_mail_goodb, &kp G &kp O &kp O &kp D &kp F &kp O &kp R &kp T &kp H &kp E &kp B &kp L &kp O &kp O &kp D &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M)
+SS_BEHAVIOR(ss_mail_mmm, &kp G &kp E &kp R &kp M &kp A &kp N &kp DOT &kp M &kp O &kp R &kp A &kp L &kp E &kp S &kp AT &kp M &kp M &kp M &kp H &kp C &kp DOT &kp C &kp O &kp M)
+SS_BEHAVIOR(ss_mail_sl, &kp G &kp E &kp R &kp M &kp A &kp N &kp DOT &kp M &kp O &kp R &kp A &kp L &kp E &kp S &kp AT &kp S &kp M &kp A &kp R &kp T &kp L &kp O &kp G &kp I &kp X &kp P &kp R &kp DOT &kp C &kp O &kp M)
 
 / {
     chosen {
