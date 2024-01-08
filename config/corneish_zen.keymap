@@ -20,7 +20,7 @@
 #define MEDIA 2
 #define FUN 3
 #define NAV 4
-#define NUM 4
+#define NUM 5
 #define NUMPAD 6
 #define WNAV 7
 #define EMAILS 8
