@@ -20,11 +20,12 @@
 #define MEDIA 2
 #define FUN 3
 #define NAV 4
-#define NUMPAD 5
-#define WNAV 6
-#define EMAILS 7
-#define ADJUST 8
-#define TNAV 9
+#define NUM 4
+#define NUMPAD 6
+#define WNAV 7
+#define EMAILS 8
+#define ADJUST 9
+#define TNAV 10
 
 /* #define DEFAULT 0 */
 /* #define SYM 1 */
@@ -177,6 +178,16 @@ SS_BEHAVIOR(ss_mail_sl, &kp G &kp E &kp R &kp M &kp A &kp N &kp DOT &kp M &kp O 
     &mo NAV    _______    _______    _______    _______    &kp INS    &kp HOME        &kp PG_DN  &kp PG_UP   &kp END
                           XXXXXXX    XXXXXXX    CANCEL     _______    XXXXXXX         XXXXXXX
                            >;
+                };
+
+                num_layer  {
+                        label = "num";
+                        bindings = <
+    _______   _______   _______   _______   _______   &kp EQUAL       &kp N7    &kp N8    &kp N9  _______
+    _______   _______   _______   _______   _______   &kp PLUS        &kp N4    &kp N5    &kp N6  &td_dotcom
+    _______   _______   _______   _______   _______   &kp ASTERISK    &kp N1    &kp N2    &kp N3  &kp FSLH
+                        XXXXXXX   XXXXXXX   CANCEL    &kp N0          XXXXXXX   XXXXXXX
+                        >;
                 };
 
                numpad_layer  {

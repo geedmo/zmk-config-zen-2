@@ -84,7 +84,8 @@ COMB(C_enter_2,             &kp RET,         LM3 LM2)
 // left+right side combos
 COMB(C_emails,              &sl EMAILS,      LT1 RT1)
 COMB(C_wnav,                &sl WNAV,        LM2 RM2)
-COMB(C_numpad,              &sl NUMPAD,      LB2 LB1)
+COMB(C_num,                 &sl NUM,         LB2 LB1)
+COMB(C_numpad,              &sl NUMPAD,      LB1 LB0)
 /* COMB(C_numword,          &mo NUMWORD,     LOWER,    NAVSPC) */
 /* COMB(C_caps,             &mo KC_CAPS,     LB3 RB3) */
 /* COMB(C_mouse_1,          &mo MOUSE,       KC_S,     KC_L) */
